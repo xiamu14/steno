@@ -2,6 +2,7 @@
   "name": "@redchili/steno",
   "version": "2.0.1",
   "description": "Specialized fast async file writer",
+  "private": false,
   "keywords": [
     "fs",
     "file",
