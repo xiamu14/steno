@@ -1,6 +1,6 @@
 {
-  "name": "steno",
-  "version": "2.0.0",
+  "name": "@redchili/steno",
+  "version": "2.0.1",
   "description": "Specialized fast async file writer",
   "keywords": [
     "fs",
@@ -15,27 +15,25 @@
     "writing",
     "safe"
   ],
-  "homepage": "https://github.com/typicode/steno",
+  "main": "lib/index.js",
+  "module": "lib/index.esm.js",
+  "homepage": "https://github.com/xiamu14/steno",
   "bugs": {
-    "url": "https://github.com/typicode/steno/issues"
+    "url": "https://github.com/xiamu14/steno/issues"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/typicode/steno.git"
+    "url": "https://github.com/xiamu14/steno.git"
   },
-  "funding": "https://github.com/sponsors/typicode",
   "license": "MIT",
-  "author": "Typicode <typicode@gmail.com>",
-  "type": "module",
-  "exports": "./lib/index.js",
+  "author": "Ben <x_z_gfree@163.com>",
   "types": "lib/index.d.ts",
   "files": [
-    "lib/index.js",
-    "lib/index.d.ts"
+    "lib"
   ],
   "scripts": {
     "test": "npm run build && xv lib",
-    "build": "del-cli lib && tsc",
+    "build": "del-cli lib && rollup -c",
     "lint": "eslint src --ext .ts --ignore-path .gitignore",
     "prepare": "husky install",
     "prepublishOnly": "npm run build",
@@ -52,6 +50,11 @@
     "@typicode/eslint-config": "^0.1.0",
     "del-cli": "^3.0.1",
     "husky": "^6.0.0",
+    "rollup": "^2.56.2",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-eslint": "^7.0.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.30.0",
     "typescript": "^4.2.2",
     "xv": "^0.2.1"
   },
